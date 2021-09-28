@@ -1,18 +1,12 @@
-@use '@styles/reset';
-@use '@styles/global' as g;
+@use "@styles/reset";
+@use "@styles/global" as g;
 @import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 body {
-  overflow-x: hidden;
-  margin-top: 10vh;
-  @include g.set-size(100vw, 90vh);
+  @include g.set-size(100vw, 100vh);
   font-family: "Noto Sans KR", sans-serif;
 }
 
 #app {
   @include g.set-size(100%, 100%);
-}
-
-.header{
-  background-color:black;
 }

@@ -26,7 +26,7 @@ export default class Component {
     initState() { return {} }
     template() { return ''; }
     render() {
-        console.log(this.constructor.name, "rendered")
+        // console.log(this.constructor.name, "rendered")
         this.$elem.innerHTML = this.template();
         this.mounted();
     }

@@ -1,5 +1,3 @@
-const getDiffSet = (setA, setB) => new Set([...setA].filter(x => !setB.has(x))); // set1 - set2
-
 const localeNumber = (number) => Number(number).toLocaleString('ko-KR')
 
 const fixedFloat = (number, digit) => parseFloat(number).toFixed(digit)

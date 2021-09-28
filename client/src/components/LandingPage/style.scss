@@ -1,0 +1,6 @@
+@use "@styles/global" as g;
+
+.modal-wrapper {
+  @include g.set-size(100%, 100%);
+  background-color: aqua;
+}

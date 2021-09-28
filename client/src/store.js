@@ -3,7 +3,7 @@ import api from '@core/api.js';
 
 const initState = {
     map: null,
-    modalContent: null,
+    modalState: null,
     isFetching: false,
     stays: [],
 };
@@ -18,7 +18,7 @@ const reducer = (state = initState, action = {}) => {
         case 'SET_MAP':
             return { ...state, map: action.payload }
         case 'SET_MODAL_CONTENT':
-            return { ...state, modalContent: action.payload }
+            return { ...state, modalState: action.payload }
         case 'REQUEST_STAYS':
             return { ...state, isFetching: true }
         case 'RECEIVE_STAYS':
@@ -32,7 +32,7 @@ export const store = createStore(reducer);
 
 //actions
 export const setMap = (payload) => ({ type: SET_MAP, payload });
-export const setModalContent = (payload) => ({ type: SET_MODAL_CONTENT, payload });
+export const setModalState = (payload) => ({ type: SET_MODAL_CONTENT, payload });
 export const requestStays = () => ({ type: REQUEST_STAYS });
 export const receiveStays = (payload) => ({ type: RECEIVE_STAYS, payload });
 // 비동기 로직은 원래 redux-thunk 등을 사용하여 하는 듯.. 더 알아봐야 함
