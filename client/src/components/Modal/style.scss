@@ -1,0 +1,15 @@
+@use '@styles/global' as g;
+
+.modal {
+  position: fixed;
+  top: 0;
+  @include g.set-size(100vw, 100vh);
+  @include g.flex-center;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  &__content {
+    @include g.set-size-with-padding(30%, 65%, 1.5%, 1.5%);
+    @include g.wrapper-round(0.1em, 1vw);
+    background-color: #ffffff;
+  }
+}

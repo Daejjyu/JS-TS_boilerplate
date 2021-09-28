@@ -1,0 +1,53 @@
+$header-height: 10vh;
+@mixin flex-row {
+  display: flex;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin align-center {
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin set-size($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin set-size-with-padding($width, $height, $padding-width, $padding-height) {
+  @include set-size($width - 2 * $padding-width, $height - 2 * $padding-height);
+  padding: $padding-height $padding-width;
+}
+
+@mixin margin-center($outer-width, $outer-height, $inner-width, $inner-height) {
+  @include set-size($inner-width, $inner-height);
+  margin: ($outer-height - $inner-height)/2 ($outer-width - $inner-width)/2;
+}
+
+@mixin img($path) {
+  background: url($path) no-repeat;
+}
+
+@mixin img-center($path) {
+  background: url($path) no-repeat;
+  background-position: center center;
+}
+
+@mixin wrapper-round($border-width, $radius) {
+  border: $border-width solid #d7d7d7;
+  border-radius: $radius;
+}
+
+@mixin wrapper-shadow {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1), 0px 4px 20px rgba(0, 0, 0, 0.1);
+}

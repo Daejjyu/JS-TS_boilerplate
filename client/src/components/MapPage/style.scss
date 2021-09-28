@@ -1,0 +1,7 @@
+@use '@styles/global' as g;
+
+.search-result {
+  @include g.flex-row;
+  width: 100%;
+  min-height: 100%;
+}

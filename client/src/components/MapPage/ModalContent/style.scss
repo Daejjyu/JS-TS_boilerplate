@@ -1,0 +1,73 @@
+@use '@styles/global' as g;
+
+.map-page-modal {
+  @include g.flex-column;
+  gap: 2vh;
+  font-size: 1em;
+  line-height: 1em;
+  color: #333333;
+  &__header {
+    @include g.flex-row;
+    &__price {
+      font-size: 1.2em;
+      color: #000000;
+      font-weight: bold;
+    }
+    &__review {
+      margin-left: auto;
+    }
+  }
+  &__condition {
+    font-size: 0.9em;
+    line-height: 0.9em;
+    @include g.wrapper-round(0.1vw, 0.5vw);
+    overflow: hidden;
+    &__days {
+      @include g.flex-row;
+    }
+    .condition-box {
+      @include g.set-size-with-padding(100%, 100%, 2%, 3%);
+      border: 0.1vw solid #d7d7d7;
+      &__key {
+        font-weight: bold;
+        color: #000000;
+      }
+    }
+  }
+  &__reserve-btn {
+    @include g.set-size-with-padding(100%, 100%, 0%, 3.5%);
+    @include g.wrapper-round(0vw, 0.5vw);
+    background-color: #444444;
+    color: #ffffff;
+    font-weight: bold;
+    &:hover {
+      background-color: #555555;
+    }
+    cursor: pointer;
+  }
+  &__message {
+    @include g.set-size-with-padding(100%, 100%, 0%, 1%);
+    text-align: center;
+    font-size: 0.8em;
+    line-height: 0.8em;
+  }
+  &__price-box {
+    @include g.flex-row;
+    font-size: 0.9em;
+    line-height: 0.9em;
+    &__name {
+      text-decoration: underline;
+    }
+    &__value {
+      margin-left: auto;
+    }
+    &.total {
+      color: #000000;
+      font-weight: bold;
+    }
+  }
+  .line {
+    @include g.set-size-with-padding(100%, 100%, 0%, 0%);
+    border: 0.1vh solid #dddddd;
+  }
+}

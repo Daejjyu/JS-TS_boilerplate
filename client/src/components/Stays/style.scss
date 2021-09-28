@@ -1,0 +1,117 @@
+@use '@styles/global' as g;
+
+.stays {
+  @include g.flex-column;
+  width: 46%;
+  padding: 2% 2% 0% 2%;
+  z-index: 1;
+  background-color: #ffffff;
+  &__search-info {
+    font-size: 1em;
+    line-height: 1em;
+  }
+  &__title {
+    @include g.flex-row;
+    font-size: 2em;
+    line-height: 1.7em;
+    &__loading {
+      margin-left: auto;
+    }
+  }
+  &__list {
+    padding-top: 2%;
+  }
+  &__item {
+    @include g.set-size(100%, 30vh);
+    padding: 3vh 2% 3vh 0;
+    overflow: hidden;
+    cursor: pointer;
+    .info_wrapper {
+      @include g.flex-row;
+      @include g.set-size(100%, 100%);
+      align-items: center;
+      gap: 2%;
+      &__img-box {
+        @include g.set-size(90%, 100%);
+        &__img {
+          @include g.wrapper-round(0, 1vw);
+          @include g.set-size(100%, 100%);
+          object-fit: cover;
+        }
+      }
+      &__info {
+        @include g.set-size-with-padding(100%, 100%, 1%, 3%);
+
+        font-size: 0.9em;
+        line-height: 0.9em;
+        color: #828282;
+        .top-wrapper {
+          @include g.flex-row;
+          @include g.set-size(100%, 25%);
+          justify-content: space-between;
+          &__text {
+            @include g.flex-column;
+            @include g.set-size(70%, 100%);
+            &__type {
+              @include g.set-size(100%, 100%);
+            }
+            &__title {
+              @include g.set-size(100%, 100%);
+              color: #333333;
+              font-size: 1.4em;
+              line-height: 1.5em;
+            }
+          }
+          &__wishlist-icon {
+            @include g.set-size(15%, 100%);
+            @include g.wrapper-round(0, 3vw);
+            transform: translateY(-1vh);
+            font-size: 2em;
+            text-align: center;
+            line-height: 1.6em;
+            &:hover {
+              background-color: rgba(0, 0, 0, 0.05);
+            }
+          }
+        }
+        .options {
+          @include g.set-size-with-padding(100%, 55%, 0%, 2%);
+        }
+        .bottom-wrapper {
+          @include g.flex-row;
+          @include g.set-size(100%, 20%);
+          &__rating {
+            @include g.set-size(100%, 100%);
+            display: flex;
+            align-items: flex-end;
+            color: #333333;
+            font-size: 1.2em;
+            line-height: 3vh;
+            .icon-star {
+              @include g.img("@img/icon-star.png");
+              width: 2.3vh;
+              height: 2.3vh;
+            }
+          }
+          &__text {
+            @include g.flex-column;
+            @include g.set-size(100%, 100%);
+            text-align: right;
+            &__price-per {
+              @include g.set-size(100%, 100%);
+              font-size: 1.2em;
+              line-height: 3vh;
+              color: #333333;
+            }
+            &__price-total {
+              @include g.set-size(100%, 100%);
+              font-size: 1em;
+              line-height: 3vh;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+}

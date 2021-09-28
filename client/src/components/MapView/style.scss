@@ -1,0 +1,19 @@
+@use '@styles/global' as g;
+
+.map-view {
+  position: fixed;
+  left: 50vw;
+  @include g.set-size(100vw, 90vh);
+  &__map {
+    @include g.set-size(50%, 100%);
+  }
+  &__marker {
+    @include g.wrapper-round(0.1em, 1vw);
+    padding: 0.5vw;
+    background-color: #ffffff;
+    &:hover,
+    &.selected {
+      background-color: #cccccc;
+    }
+  }
+}
