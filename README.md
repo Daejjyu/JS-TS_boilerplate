@@ -1,5 +1,7 @@
 # JS_boilerplate
 
+## TypeScript용 branch도 존재
+
 ### 기본 설정
 
 ```
