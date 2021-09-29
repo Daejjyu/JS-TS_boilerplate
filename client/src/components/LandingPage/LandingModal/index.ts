@@ -1,11 +1,11 @@
-import './style.scss'
+import "./style.scss";
 
 const LandingModal = (modalState) => {
-    return `
+  return `
         <div class='landing-page-modal'>
         ${modalState}
         </div>
-        `
-}
+        `;
+};
 
 export default LandingModal;

@@ -7,7 +7,7 @@ const Dotenv = require('dotenv-webpack');
 
 module.exports = {
     mode: "development",
-    entry: "./src/index.js",
+    entry: "./src/index.ts",
     devtool: 'inline-source-map', //source map for debug, avoid using in production
     output: {
         path: pathOut,
@@ -22,13 +22,14 @@ module.exports = {
             "@img": path.resolve(__dirname, "src/img/"),
             "@svg": path.resolve(__dirname, "src/svg/"),
         },
+        extensions: ['.tsx', '.ts', '.js'],
     },
     module: {
         rules: [
             {
-                test: /\.js$/i,
-                use: 'babel-loader',
-                exclude: /node_modules/
+                test: /\.tsx?$/,
+                use: 'ts-loader',
+                exclude: /node_modules/,
             },
             {
                 test: /\.s[ac]ss$/i,

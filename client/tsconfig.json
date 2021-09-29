@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "outDir": "./static/",
+    "noImplicitAny": false,
+    "module": "es6",
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "@src/*": ["src/*"],
+      "@core/*": ["src/core/*"],
+      "@components/*": ["src/components/*"],
+      "@styles/*": ["src/styles/*"],
+      "@img/*": ["src/img/*"],
+      "@svg/*": ["src/svg/*"]
+    }
+  }
+}
